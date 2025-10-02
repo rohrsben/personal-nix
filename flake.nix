@@ -28,6 +28,9 @@
                 inherit pkgs;
                 source = colloid-gtk;
             };
+            treesitter-parsers = import ./src/treesitter-parsers.nix {
+                inherit pkgs;
+            };
         };
     };
 }
