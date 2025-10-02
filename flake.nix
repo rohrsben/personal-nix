@@ -1,5 +1,5 @@
 {
-    description = "";
+    description = "Personally packaged nix derivations";
 
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -21,14 +21,13 @@
     in {
         packages.x86_64-linux = {
             colloid-icon = import ./src/colloid-icon.nix { 
-                pkgs = pkgs;
+                inherit pkgs;
                 source = colloid-icon;
             };
             colloid-gtk = import ./src/colloid-gtk.nix {
-                pkgs = pkgs;
+                inherit pkgs;
                 source = colloid-gtk;
             };
-            # treesitter-parsers = 
         };
     };
 }
