@@ -18,6 +18,8 @@ pkgs.stdenvNoCC.mkDerivation {
 
     configurePhase = ''
         rm links/apps/scalable/io.github.vinegarhq.Vinegar.studio.svg
+        rm links/apps/scalable/kerry.svg
+        rm links/apps/scalable/org.kde.kfind.svg
     '';
 
     installPhase = ''
