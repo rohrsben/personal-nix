@@ -25,7 +25,7 @@ pkgs.stdenvNoCC.mkDerivation {
     installPhase = ''
         runHook preInstall
 
-        name= ./install.sh --scheme everforest --theme grey --dest $out/share/icons
+        name= ./install.sh --scheme everforest --dest $out/share/icons
         jdupes --quiet --link-soft --recurse $out/share
 
         runHook postInstall
