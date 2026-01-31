@@ -16,7 +16,7 @@ pkgs.stdenvNoCC.mkDerivation {
     installPhase = ''
         runHook preInstall
 
-        name= HOME="$TMPDIR" ./install.sh --size standard --theme red --color dark --tweaks everforest rimless normal --dest "$out/share/themes"
+        name= HOME="$TMPDIR" ./install.sh --size standard --theme red --color light --tweaks everforest rimless normal --dest "$out/share/themes"
 
         jdupes --quiet --link-soft --recurse "$out/share"
 
