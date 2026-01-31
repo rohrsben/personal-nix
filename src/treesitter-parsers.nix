@@ -13,7 +13,7 @@ pkgs.stdenvNoCC.mkDerivation rec {
     installPhase = ''
         mkdir -p "$out/parser"
         for dep in ${pkgs.lib.concatStringsSep " " (map (dep: "${dep}/parser") dependencies)}; do
-            ln -s "$dep"/* "$out/parser"
+            ln -s "$dep"/* "$out/parser/"
         done
     '';
 }
