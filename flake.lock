@@ -1,34 +1,18 @@
 {
   "nodes": {
-    "colloid-gtk": {
+    "ef-gtk-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1764896946,
-        "narHash": "sha256-BnULzudLLxzz7hYnUSwW6cbc7F3hX1dR3VHnxrA0zcM=",
-        "owner": "vinceliuice",
-        "repo": "Colloid-gtk-theme",
-        "rev": "fd805dbeeacb12f7971b98408c415c3f472e5aef",
+        "lastModified": 1761253526,
+        "narHash": "sha256-XHO6NoXJwwZ8gBzZV/hJnVq5BvkEKYWvqLBQT00dGdE=",
+        "owner": "Fausto-Korpsvart",
+        "repo": "Everforest-GTK-Theme",
+        "rev": "9b8be4d6648ae9eaae3dd550105081f8c9054825",
         "type": "github"
       },
       "original": {
-        "owner": "vinceliuice",
-        "repo": "Colloid-gtk-theme",
-        "type": "github"
-      }
-    },
-    "colloid-icon": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1766802091,
-        "narHash": "sha256-Mice1/a22c1z2R7ToRioBzOJEJdmVHem6GebdiRof3s=",
-        "owner": "vinceliuice",
-        "repo": "Colloid-icon-theme",
-        "rev": "c9e702beb96f731e2b3bea2fa1c619fa94e79a9f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vinceliuice",
-        "repo": "Colloid-icon-theme",
+        "owner": "Fausto-Korpsvart",
+        "repo": "Everforest-GTK-Theme",
         "type": "github"
       }
     },
@@ -50,8 +34,7 @@
     },
     "root": {
       "inputs": {
-        "colloid-gtk": "colloid-gtk",
-        "colloid-icon": "colloid-icon",
+        "ef-gtk-theme": "ef-gtk-theme",
         "nixpkgs": "nixpkgs"
       }
     }

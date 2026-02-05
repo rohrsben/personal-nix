@@ -1,7 +1,7 @@
 { pkgs, source }:
 
 pkgs.stdenvNoCC.mkDerivation {
-    name = "colloid-gtk";
+    name = "everforest-gtk";
 
     src = source;
 
@@ -10,15 +10,17 @@ pkgs.stdenvNoCC.mkDerivation {
     propagatedUserEnvPkgs = [ pkgs.gtk-engine-murrine ];
 
     postPatch = ''
-        patchShebangs install.sh
+        patchShebangs themes/install.sh
     '';
+
+    dontBuild = true;
 
     installPhase = ''
         runHook preInstall
 
-        name= HOME="$TMPDIR" ./install.sh --color dark --theme red --tweaks everforest rimless normal --dest "$out/share/themes"
+        mkdir -p "$out/share/themes"
 
-        jdupes --quiet --link-soft --recurse "$out/share"
+        ./themes/install.sh --dest "$out/share/themes" --name Everforest --color dark --theme red --tweaks medium
 
         runHook postInstall
     '';

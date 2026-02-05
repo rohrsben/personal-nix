@@ -4,32 +4,24 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-        colloid-icon = {
-            url = "github:vinceliuice/Colloid-icon-theme";
-            flake = false;
-        };
-
-        colloid-gtk = {
-            url = "github:vinceliuice/Colloid-gtk-theme";
+        ef-gtk-theme = {
+            url = "github:Fausto-Korpsvart/Everforest-GTK-Theme";
             flake = false;
         };
     };
 
-    outputs = { self, nixpkgs, colloid-icon, colloid-gtk }:
+    outputs = { self, nixpkgs, ef-gtk-theme }:
     let
         pkgs = import nixpkgs { system = "x86_64-linux"; };
     in {
         packages.x86_64-linux = {
-            colloid-icon = import ./src/colloid-icon.nix { 
+            icon = import ./src/icon.nix { 
                 inherit pkgs;
-                source = colloid-icon;
+                source = ef-gtk-theme;
             };
-            colloid-gtk = import ./src/colloid-gtk.nix {
+            gtk = import ./src/gtk.nix {
                 inherit pkgs;
-                source = colloid-gtk;
-            };
-            treesitter-parsers = import ./src/treesitter-parsers.nix {
-                inherit pkgs;
+                source = ef-gtk-theme;
             };
         };
     };
