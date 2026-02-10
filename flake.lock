@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "ef-qt": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705939974,
+        "narHash": "sha256-5ihKScPJMDU0pbeYtUx/UjC4J08/r40mAK7D+1TK6wA=",
+        "owner": "binEpilo",
+        "repo": "materia-everforest-kvantum",
+        "rev": "391eb1d917dab900dc1ef16ffdff1a4546308ee4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "binEpilo",
+        "repo": "materia-everforest-kvantum",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1769461804,
@@ -35,6 +51,7 @@
     "root": {
       "inputs": {
         "ef-gtk-theme": "ef-gtk-theme",
+        "ef-qt": "ef-qt",
         "nixpkgs": "nixpkgs"
       }
     }
