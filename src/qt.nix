@@ -8,7 +8,7 @@ pkgs.stdenvNoCC.mkDerivation {
     dontBuild = true;
 
     installPhase = ''
-        mkdir -p "$out/share/Kvantum/everforest-qt";
-        cp MateriaEverforestDark/* "$out/share/Kvantum/everforest-qt"
+        mkdir -p "$out/share/Kvantum/MateriaEverforestDark";
+        cp MateriaEverforestDark/* "$out/share/Kvantum/MateriaEverforestDark"
     '';
 }
